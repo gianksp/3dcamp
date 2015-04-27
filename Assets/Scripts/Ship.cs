@@ -15,11 +15,10 @@ public class Ship : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-	
+		
 		//Move and rotate object to target place
 	    force = target.position - transform.position;
 		GetComponent<Rigidbody>().AddForceAtPosition (force * followSensitivity, transform.position);
-		//GetComponent<Rigidbody>().AddRelativeTorque (0,0, force.x * rotationSensibility);
 
 		//Always try to keep it vertical by adjusting torque around Z
 		Vector3 predictedUp  = Quaternion.AngleAxis(GetComponent<Rigidbody>().angularVelocity.magnitude * Mathf.Rad2Deg * stabilityCoeficient / stabilitySpeed, GetComponent<Rigidbody>().angularVelocity) * transform.up;
