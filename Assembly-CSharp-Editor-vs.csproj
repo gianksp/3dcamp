@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{CC69F220-070B-5C5F-A77C-27EBD1858FA0}</ProjectGuid>
+	<ProjectGuid>{4855DC28-991B-6386-70F8-2E4D0929B914}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,11 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Libraries\Cardboard\Editor\CardboardEditor.cs" />
-     <Compile Include="Assets\Libraries\Cardboard\Editor\StereoControllerEditor.cs" />
-     <None Include="Assets\Libraries\Cardboard\Resources\SkyboxMesh.shader" />
-     <None Include="Assets\Libraries\Cardboard\Resources\GUIScreen.shader" />
+     <Compile Include="Assets\Cardboard\Editor\CardboardEditor.cs" />
+     <Compile Include="Assets\Cardboard\Editor\StereoControllerEditor.cs" />
+     <None Include="Assets\Cardboard\Legacy\Resources\SkyboxMesh.shader" />
+     <None Include="Assets\Cardboard\Legacy\Resources\GUIScreen.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Cardboard\Resources\RadialUndistortionEffect.shader" />
+     <None Include="Assets\Cardboard\Resources\SolidColor.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -87,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{2F87286E-929D-B1A2-F27D-429B397C7F82}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+      <Project>{B6B6D8C0-EA44-18DB-66F3-A70D94D3D0DD}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
